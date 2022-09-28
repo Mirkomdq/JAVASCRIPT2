@@ -1,0 +1,58 @@
+
+function saludar() {
+    const inicio = parseInt(prompt("Bienvenido! Para comenzar escribe 1."));
+
+    if (inicio === 1) {
+        consultarPromedio();
+    } else {
+        alert('No entendí tu respuesta');
+        saludar();
+    }
+}
+function consultarPromedio() {
+
+    let nota = parseInt(prompt("Cual es tu nota en el primer examen? "))
+    if (nota > 0 || nota < 10) {
+        let nota1 = parseInt(prompt("Cual es tu nota en el segundo examen? "))
+        if (nota1 > 0 || nota1 < 10) {
+            let nota2 = parseInt(prompt("Cual es tu nota en el tercer examen? "))
+            if (nota2 > 0 || nota2 < 10) {
+                promedio = (nota + nota1 + nota2) / 3
+     
+
+
+            }
+
+        }
+    }
+    return promedio
+    
+    consultarPromedio()
+
+
+}
+
+function avisos() {
+    if (promedio > 7)
+        alert("Felicidades! Pasaste la materia.")
+    while (promedio < 7) {
+
+        
+            alert("Lo sentimos, debe recursar la materia.")
+            let opcion = parseInt(prompt("Tiene dos opciones para rendir el recuperatorio global. 07/12 o 11/12. Para la primera opcion escriba 1, de lo contrario escriba 2."))
+            if (opcion == "1")
+                alert("Perfecto. Ha sido agendado para rendir el dia 7 de diciembre.")
+            if (opcion == "2")
+                alert("Perfecto. Ha sido agendado para rendir el dia 11 de diciembre.")
+
+                
+                aprobaste();
+
+            
+        }
+    
+    }
+
+
+saludar();
+avisos();
